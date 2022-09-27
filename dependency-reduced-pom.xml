@@ -32,26 +32,19 @@
                   <exclude>org.openjfx:javafx-graphics:*</exclude>
                   <exclude>org.bytedeco:ffmpeg:jar:android-arm:*</exclude>
                   <exclude>org.bytedeco:ffmpeg:jar:android-arm64:*</exclude>
-                  <exclude>org.nd4j:nd4j-api:jar:1.0.0-M2</exclude>
                   <exclude>org.nd4j:protobuf:jar:1.0.0-M2</exclude>
-                  <exclude>org.nd4j:nd4j-common:jar:1.0.0-M2</exclude>
                   <exclude>org.nd4j:guava:jar:1.0.0-M2</exclude>
-                  <exclude>org.nd4j:nd4j-native-api:jar:1.0.0-M2</exclude>
                   <exclude>org.nd4j:jackson:jar:1.0.0-M2</exclude>
-                  <exclude>org.bytedeco:hdf5-platform:jar:1.12.1-1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:android-arm:1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:android-arm64:1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:android-x86:1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:android-x86_64:1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:ios-arm64:1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:ios-x86_64:1.5.7</exclude>
-                  <exclude>org.bytedeco:javacpp:jar:linux-ppc64le:1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:macosx-arm64:1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:macosx-x86_64:1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:windows-x86:1.5.7</exclude>
                   <exclude>org.bytedeco:javacpp:jar:windows-x86_64:1.5.7</exclude>
-                  <exclude>org.bytedeco:hdf5:jar:1.12.1-1.5.7</exclude>
-                  <exclude>org.bytedeco:hdf5:jar:linux-ppc64le:1.12.1-1.5.7</exclude>
                   <exclude>org.bytedeco:hdf5:jar:macosx-x86_64:1.12.1-1.5.7</exclude>
                   <exclude>org.bytedeco:hdf5:jar:windows-x86:1.12.1-1.5.7</exclude>
                   <exclude>org.bytedeco:hdf5:jar:windows-x86_64:1.12.1-1.5.7</exclude>
@@ -66,9 +59,7 @@
                   <exclude>org.bytedeco:leptonica:jar:1.82.0-1.5.7</exclude>
                   <exclude>org.bytedeco:tesseract:jar:5.0.1-1.5.7</exclude>
                   <exclude>org.openjfx:javafx-graphics:jar:11</exclude>
-                  <exclude>org.openjfx:javafx-graphics:jar:linux:11</exclude>
                   <exclude>org.openjfx:javafx-base:jar:11</exclude>
-                  <exclude>org.openjfx:javafx-base:jar:linux:11</exclude>
                   <exclude>org.bytedeco:opencv-platform:jar:4.5.5-1.5.7</exclude>
                   <exclude>org.bytedeco:opencv:jar:android-arm:4.5.5-1.5.7</exclude>
                   <exclude>org.bytedeco:opencv:jar:android-arm64:4.5.5-1.5.7</exclude>
@@ -76,11 +67,6 @@
                   <exclude>org.bytedeco:opencv:jar:android-x86_64:4.5.5-1.5.7</exclude>
                   <exclude>org.bytedeco:opencv:jar:ios-arm64:4.5.5-1.5.7</exclude>
                   <exclude>org.bytedeco:opencv:jar:ios-x86_64:4.5.5-1.5.7</exclude>
-                  <exclude>org.bytedeco:opencv:jar:linux-x86:4.5.5-1.5.7</exclude>
-                  <exclude>org.bytedeco:opencv:jar:linux-x86_64:4.5.5-1.5.7</exclude>
-                  <exclude>org.bytedeco:opencv:jar:linux-armhf:4.5.5-1.5.7</exclude>
-                  <exclude>org.bytedeco:opencv:jar:linux-arm64:4.5.5-1.5.7</exclude>
-                  <exclude>org.bytedeco:opencv:jar:linux-ppc64le:4.5.5-1.5.7</exclude>
                   <exclude>org.bytedeco:opencv:jar:macosx-arm64:4.5.5-1.5.7</exclude>
                   <exclude>org.bytedeco:opencv:jar:macosx-x86_64:4.5.5-1.5.7</exclude>
                   <exclude>org.bytedeco:opencv:jar:windows-x86:4.5.5-1.5.7</exclude>
@@ -90,11 +76,6 @@
                   <exclude>org.bytedeco:leptonica:jar:android-arm64:1.82.0-1.5.7</exclude>
                   <exclude>org.bytedeco:leptonica:jar:android-x86:1.82.0-1.5.7</exclude>
                   <exclude>org.bytedeco:leptonica:jar:android-x86_64:1.82.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:leptonica:jar:linux-x86:1.82.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:leptonica:jar:linux-x86_64:1.82.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:leptonica:jar:linux-armhf:1.82.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:leptonica:jar:linux-arm64:1.82.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:leptonica:jar:linux-ppc64le:1.82.0-1.5.7</exclude>
                   <exclude>org.bytedeco:leptonica:jar:macosx-x86_64:1.82.0-1.5.7</exclude>
                   <exclude>org.bytedeco:leptonica:jar:windows-x86:1.82.0-1.5.7</exclude>
                   <exclude>org.bytedeco:leptonica:jar:windows-x86_64:1.82.0-1.5.7</exclude>
@@ -103,11 +84,6 @@
                   <exclude>org.bytedeco:ffmpeg:jar:android-arm64:5.0-1.5.7</exclude>
                   <exclude>org.bytedeco:ffmpeg:jar:android-x86:5.0-1.5.7</exclude>
                   <exclude>org.bytedeco:ffmpeg:jar:android-x86_64:5.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:ffmpeg:jar:linux-x86:5.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:ffmpeg:jar:linux-x86_64:5.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:ffmpeg:jar:linux-armhf:5.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:ffmpeg:jar:linux-arm64:5.0-1.5.7</exclude>
-                  <exclude>org.bytedeco:ffmpeg:jar:linux-ppc64le:5.0-1.5.7</exclude>
                   <exclude>org.bytedeco:ffmpeg:jar:macosx-arm64:5.0-1.5.7</exclude>
                   <exclude>org.bytedeco:ffmpeg:jar:macosx-x86_64:5.0-1.5.7</exclude>
                   <exclude>org.bytedeco:ffmpeg:jar:windows-x86:5.0-1.5.7</exclude>
@@ -121,16 +97,11 @@
                   <exclude>org.bytedeco:openblas:jar:android-x86_64:0.3.13-1.5.5</exclude>
                   <exclude>org.bytedeco:openblas:jar:ios-arm64:0.3.13-1.5.5</exclude>
                   <exclude>org.bytedeco:openblas:jar:ios-x86_64:0.3.13-1.5.5</exclude>
-                  <exclude>org.bytedeco:openblas:jar:linux-armhf:0.3.13-1.5.5</exclude>
-                  <exclude>org.bytedeco:openblas:jar:linux-arm64:0.3.13-1.5.5</exclude>
-                  <exclude>org.bytedeco:openblas:jar:linux-ppc64le:0.3.13-1.5.5</exclude>
                   <exclude>org.bytedeco:openblas:jar:macosx-x86_64:0.3.13-1.5.5</exclude>
                   <exclude>org.bytedeco:openblas:jar:windows-x86:0.3.13-1.5.5</exclude>
                   <exclude>org.bytedeco:openblas:jar:windows-x86_64:0.3.13-1.5.5</exclude>
                   <exclude>org.bytedeco:mkl-platform:jar:2021.1-1.5.5</exclude>
                   <exclude>org.bytedeco:mkl:jar:2021.1-1.5.5</exclude>
-                  <exclude>org.bytedeco:mkl:jar:linux-x86:2021.1-1.5.5</exclude>
-                  <exclude>org.bytedeco:mkl:jar:linux-x86_64:2021.1-1.5.5</exclude>
                   <exclude>org.bytedeco:mkl:jar:macosx-x86_64:2021.1-1.5.5</exclude>
                   <exclude>org.bytedeco:mkl:jar:windows-x86:2021.1-1.5.5</exclude>
                   <exclude>org.bytedeco:mkl:jar:windows-x86_64:2021.1-1.5.5</exclude>
@@ -172,8 +143,8 @@
     </plugins>
   </build>
   <properties>
-    <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 </project>

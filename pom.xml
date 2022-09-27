@@ -13,74 +13,177 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.deeplearning4j</groupId>
-            <artifactId>deeplearning4j-modelimport</artifactId>
-            <version>1.0.0-M2</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.6.6</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.11</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <version>5.5.1</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jcl-over-slf4j</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>slf4j-api</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <dependency>
             <groupId>org.deeplearning4j</groupId>
             <artifactId>deeplearning4j-core</artifactId>
-            <version>1.0.0-M2</version>
+            <version>1.0.0-M1.1</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.deeplearning4j</groupId>-->
+<!--            <artifactId>deeplearning4j-modelimport</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.oshi</groupId>-->
+<!--            <artifactId>oshi-json</artifactId>-->
+<!--            <version>3.13.6</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.oshi</groupId>-->
+<!--            <artifactId>oshi-core</artifactId>-->
+<!--            <version>6.2.2</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.sun.activation</groupId>-->
+<!--            <artifactId>javax.activation</artifactId>-->
+<!--            <version>1.2.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>commons-io</groupId>-->
+<!--            <artifactId>commons-io</artifactId>-->
+<!--            <version>2.11.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-math3</artifactId>-->
+<!--            <version>3.6.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-compress</artifactId>-->
+<!--            <version>1.21</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-lang3</artifactId>-->
+<!--            <version>3.12.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.datavec</groupId>-->
+<!--            <artifactId>datavec-api</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.datavec</groupId>-->
+<!--            <artifactId>datavec-data-image</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.datavec</groupId>-->
+<!--            <artifactId>datavec-data-image</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.deeplearning4j</groupId>-->
+<!--            <artifactId>deeplearning4j-datasets</artifactId>-->
+<!--            <version>1.0.0-M2.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.deeplearning4j</groupId>-->
+<!--            <artifactId>deeplearning4j-datavec-iterators</artifactId>-->
+<!--            <version>1.0.0-M2.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.deeplearning4j</groupId>-->
+<!--            <artifactId>deeplearning4j-nn</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.deeplearning4j</groupId>-->
+<!--            <artifactId>deeplearning4j-ui-components</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.nd4j</groupId>-->
+<!--            <artifactId>jackson</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+
+
         <dependency>
             <groupId>org.nd4j</groupId>
-            <artifactId>nd4j-native-platform</artifactId>
-            <version>1.0.0-M1</version>
+            <artifactId>nd4j-native</artifactId>
+            <version>1.0.0-M1.1</version>
+            <classifier>linux-x86_64-compat</classifier>
         </dependency>
+
         <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.3</version>
-            <type>maven-plugin</type>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native</artifactId>
+            <version>1.0.0-M1.1</version>
         </dependency>
+
         <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <version>2.6</version>
-            <type>maven-plugin</type>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>openblas</artifactId>
+            <version>0.3.17-1.5.6</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-clean-plugin</artifactId>
-            <version>2.5</version>
-            <type>maven-plugin</type>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-install-plugin</artifactId>
-            <version>2.4</version>
-            <type>maven-plugin</type>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-deploy-plugin</artifactId>
-            <version>2.7</version>
-            <type>maven-plugin</type>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-            <version>3.3</version>
-            <type>maven-plugin</type>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-resources-plugin</artifactId>
-            <version>2.6</version>
-            <type>maven-plugin</type>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>2.4</version>
-            <type>maven-plugin</type>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.12.4</version>
-            <type>maven-plugin</type>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.bytedeco</groupId>-->
+<!--            <artifactId>javacpp</artifactId>-->
+<!--            <version>1.5.7</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.bytedeco</groupId>-->
+<!--            <artifactId>openblas</artifactId>-->
+<!--            <version>0.3.19-1.5.7</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.nd4j</groupId>-->
+<!--            <artifactId>nd4j-backend-impls</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--            <type>pom</type>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.nd4j</groupId>-->
+<!--            <artifactId>nd4j-api</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.nd4j</groupId>-->
+<!--            <artifactId>nd4j-native-api</artifactId>-->
+<!--            <version>0.9.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.nd4j</groupId>-->
+<!--            <artifactId>nd4j-native-preset</artifactId>-->
+<!--            <version>1.0.0-M2.1</version>-->
+<!--        </dependency>-->
 
     </dependencies>
     <build>
@@ -121,20 +224,20 @@
 
                                 <exclude>org.bytedeco:ffmpeg:jar:android-arm64:*</exclude>
 
-                                <exclude>org.nd4j:nd4j-api:jar:1.0.0-M2</exclude>
+<!--                                <exclude>org.nd4j:nd4j-api:jar:1.0.0-M2</exclude>-->
 
                                 <exclude>org.nd4j:protobuf:jar:1.0.0-M2</exclude>
-                                <exclude>org.nd4j:nd4j-common:jar:1.0.0-M2</exclude>
+<!--                                <exclude>org.nd4j:nd4j-common:jar:1.0.0-M2</exclude>-->
 
                                 <exclude>org.nd4j:guava:jar:1.0.0-M2</exclude>
 
-                                <exclude>org.nd4j:nd4j-native-api:jar:1.0.0-M2</exclude>
+<!--                                <exclude>org.nd4j:nd4j-native-api:jar:1.0.0-M2</exclude>-->
 
                                 <exclude>org.nd4j:jackson:jar:1.0.0-M2</exclude>
 
 <!--                                <exclude>org.bytedeco:javacpp:jar:1.5.7</exclude>-->
 
-                                <exclude>org.bytedeco:hdf5-platform:jar:1.12.1-1.5.7</exclude>
+<!--                                <exclude>org.bytedeco:hdf5-platform:jar:1.12.1-1.5.7</exclude>-->
 
 <!--                                <exclude>org.bytedeco:javacpp-platform:jar:1.5.7</exclude>-->
 
@@ -150,11 +253,6 @@
 
                                 <exclude>org.bytedeco:javacpp:jar:ios-x86_64:1.5.7</exclude>
 
-<!--                                <exclude>org.bytedeco:javacpp:jar:linux-armhf:1.5.7</exclude>-->
-
-<!--                                <exclude>org.bytedeco:javacpp:jar:linux-arm64:1.5.7</exclude>-->
-
-                                <exclude>org.bytedeco:javacpp:jar:linux-ppc64le:1.5.7</exclude>
 
                                 <exclude>org.bytedeco:javacpp:jar:macosx-arm64:1.5.7</exclude>
 
@@ -163,15 +261,6 @@
                                 <exclude>org.bytedeco:javacpp:jar:windows-x86:1.5.7</exclude>
 
                                 <exclude>org.bytedeco:javacpp:jar:windows-x86_64:1.5.7</exclude>
-
-                                <exclude>org.bytedeco:hdf5:jar:1.12.1-1.5.7</exclude>
-
-
-<!--                                <exclude>org.bytedeco:hdf5:jar:linux-armhf:1.12.1-1.5.7</exclude>-->
-
-<!--                                <exclude>org.bytedeco:hdf5:jar:linux-arm64:1.12.1-1.5.7</exclude>-->
-
-                                <exclude>org.bytedeco:hdf5:jar:linux-ppc64le:1.12.1-1.5.7</exclude>
 
                                 <exclude>org.bytedeco:hdf5:jar:macosx-x86_64:1.12.1-1.5.7</exclude>
 
@@ -209,11 +298,7 @@
 
                                 <exclude>org.openjfx:javafx-graphics:jar:11</exclude>
 
-                                <exclude>org.openjfx:javafx-graphics:jar:linux:11</exclude>
-
                                 <exclude>org.openjfx:javafx-base:jar:11</exclude>
-
-                                <exclude>org.openjfx:javafx-base:jar:linux:11</exclude>
 
                                 <exclude>org.bytedeco:opencv-platform:jar:4.5.5-1.5.7</exclude>
 
@@ -228,16 +313,6 @@
                                 <exclude>org.bytedeco:opencv:jar:ios-arm64:4.5.5-1.5.7</exclude>
 
                                 <exclude>org.bytedeco:opencv:jar:ios-x86_64:4.5.5-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:opencv:jar:linux-x86:4.5.5-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:opencv:jar:linux-x86_64:4.5.5-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:opencv:jar:linux-armhf:4.5.5-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:opencv:jar:linux-arm64:4.5.5-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:opencv:jar:linux-ppc64le:4.5.5-1.5.7</exclude>
 
                                 <exclude>org.bytedeco:opencv:jar:macosx-arm64:4.5.5-1.5.7</exclude>
 
@@ -257,16 +332,6 @@
 
                                 <exclude>org.bytedeco:leptonica:jar:android-x86_64:1.82.0-1.5.7</exclude>
 
-                                <exclude>org.bytedeco:leptonica:jar:linux-x86:1.82.0-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:leptonica:jar:linux-x86_64:1.82.0-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:leptonica:jar:linux-armhf:1.82.0-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:leptonica:jar:linux-arm64:1.82.0-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:leptonica:jar:linux-ppc64le:1.82.0-1.5.7</exclude>
-
                                 <exclude>org.bytedeco:leptonica:jar:macosx-x86_64:1.82.0-1.5.7</exclude>
 
                                 <exclude>org.bytedeco:leptonica:jar:windows-x86:1.82.0-1.5.7</exclude>
@@ -282,16 +347,6 @@
                                 <exclude>org.bytedeco:ffmpeg:jar:android-x86:5.0-1.5.7</exclude>
 
                                 <exclude>org.bytedeco:ffmpeg:jar:android-x86_64:5.0-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:ffmpeg:jar:linux-x86:5.0-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:ffmpeg:jar:linux-x86_64:5.0-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:ffmpeg:jar:linux-armhf:5.0-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:ffmpeg:jar:linux-arm64:5.0-1.5.7</exclude>
-
-                                <exclude>org.bytedeco:ffmpeg:jar:linux-ppc64le:5.0-1.5.7</exclude>
 
                                 <exclude>org.bytedeco:ffmpeg:jar:macosx-arm64:5.0-1.5.7</exclude>
 
@@ -319,16 +374,6 @@
 
                                 <exclude>org.bytedeco:openblas:jar:ios-x86_64:0.3.13-1.5.5</exclude>
 
-<!--                                <exclude>org.bytedeco:openblas:jar:linux-x86:0.3.13-1.5.5</exclude>-->
-
-<!--                                <exclude>org.bytedeco:openblas:jar:linux-x86_64:0.3.13-1.5.5</exclude>-->
-
-                                <exclude>org.bytedeco:openblas:jar:linux-armhf:0.3.13-1.5.5</exclude>
-
-                                <exclude>org.bytedeco:openblas:jar:linux-arm64:0.3.13-1.5.5</exclude>
-
-                                <exclude>org.bytedeco:openblas:jar:linux-ppc64le:0.3.13-1.5.5</exclude>
-
                                 <exclude>org.bytedeco:openblas:jar:macosx-x86_64:0.3.13-1.5.5</exclude>
 
                                 <exclude>org.bytedeco:openblas:jar:windows-x86:0.3.13-1.5.5</exclude>
@@ -338,10 +383,6 @@
                                 <exclude>org.bytedeco:mkl-platform:jar:2021.1-1.5.5</exclude>
 
                                 <exclude>org.bytedeco:mkl:jar:2021.1-1.5.5</exclude>
-
-                                <exclude>org.bytedeco:mkl:jar:linux-x86:2021.1-1.5.5</exclude>
-
-                                <exclude>org.bytedeco:mkl:jar:linux-x86_64:2021.1-1.5.5</exclude>
 
                                 <exclude>org.bytedeco:mkl:jar:macosx-x86_64:2021.1-1.5.5</exclude>
 

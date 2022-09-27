@@ -1,5 +1,6 @@
 package experiment;
 
+
 import org.deeplearning4j.nn.modelimport.keras.KerasModelImport;
 import org.deeplearning4j.nn.modelimport.keras.exceptions.InvalidKerasConfigurationException;
 import org.deeplearning4j.nn.modelimport.keras.exceptions.UnsupportedKerasConfigurationException;
@@ -9,7 +10,7 @@ import org.nd4j.common.resources.Resources;
 import org.nd4j.linalg.api.buffer.DataBuffer;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.cpu.nativecpu.NDArray;
-import org.nd4j.linalg.cpu.nativecpu.buffer.FloatBuffer;
+import org.nd4j.linalg.cpu.nativecpu.buffer.IntBuffer;
 import org.nd4j.linalg.factory.Nd4j;
 
 import java.io.IOException;
@@ -20,7 +21,7 @@ import java.util.Arrays;
  * These is not a full working solution, rather an experiment and PoC
  */
 public class ModelLoader {
-    public static void testTokenization() throws IOException, InvalidKerasConfigurationException {
+    public static Integer[][] testTokenization() throws IOException, InvalidKerasConfigurationException {
 
         //Load json exported from python pickled code
         String path = "tokenizerLowEquippedAircraft.json";
@@ -40,16 +41,19 @@ public class ModelLoader {
         // [114, 5, 1, 3, 25, 1, 1],
         // [5, 78, 138, 191, 1, 4, 113],
         // [190, 165, 124, 62, 9, 183, 10]]
+
+
+        return tokenizer.textsToSequences(input);
     }
 
 
     /**
      * Method predicts BDS type basing on the single tokenized message
      */
-    public static int[] calculateSingle(float[] msgTokens, MultiLayerNetwork model) {
+    public static int[] calculateSingle(int[] msgTokens, MultiLayerNetwork model) {
 
         NDArray ndArray = new NDArray(1, 7);
-        DataBuffer dataBuffer = new FloatBuffer(msgTokens);
+        DataBuffer dataBuffer = new IntBuffer(msgTokens);
         ndArray = new NDArray(1, 7);
         ndArray.setData(dataBuffer);
         return model.predict(ndArray);
@@ -64,19 +68,31 @@ public class ModelLoader {
 
     public static void main(String args[]) throws IOException, UnsupportedKerasConfigurationException, InvalidKerasConfigurationException {
 
+        // Model input types
+
         //String simpleMlp = new ClassPathResource("LowEquipedAircraft.h5").getFile().getPath();
         //String json = Resources.asFile("model.json").getAbsolutePath();
+        //String h5 = Resources.asFile("simple_mlp.h5").getAbsolutePath();
 
-        testTokenization();
+        // Preparing data from Kafka Topic
 
+        // Tokenization
+        System.out.println("Tokenization: SUCCEEDED");
+        Integer[][] tokensOut = testTokenization();
+
+        // Recover model train info from HDF5 file
+        String json = Resources.asFile("model.json").getAbsolutePath();
         String h5 = Resources.asFile("simple_mlp.h5").getAbsolutePath();
+        System.out.println("Getting h5 path to enter to model variable" + json);
+
+        // Init model with HDF5 info
         MultiLayerNetwork model = KerasModelImport.importKerasSequentialModelAndWeights(h5);
         model.init();
         System.out.println(model.summary());
 
         //Build up the vector to calculate BDS
         //In real life we would first need to translate the byte array into tokens
-        float[][] tokens = {{151, 92, 46, 15, 16, 110, 5},
+        int[][] tokens = {{151, 92, 46, 15, 16, 110, 5},
                 {128, 9, 1, 2, 8, 1, 1},
                 {9, 38, 109, 125, 1, 6, 143},
                 {151, 92, 96, 75, 4, 71, 5}};
@@ -85,11 +101,12 @@ public class ModelLoader {
         INDArray initCondition = Nd4j.zeros(10000, 7);
         for (int i = 0; i < 10000; i++) {
             for (int j=0; j<7; j++) {
-                initCondition.putScalar(i, j, tokens[i%4][j]);
+                initCondition.putScalar(i, j, tokensOut[i%4][j]);
             }
         }
 
 
+        // Calculate in Batch
         System.out.println("Calculating 10_000 batch messages");
         System.out.println("Starting at [millis]: " + System.currentTimeMillis());
         int[] ints = calculateBatch(initCondition, model);
@@ -98,7 +115,7 @@ public class ModelLoader {
         //Expecting repeating output of 3 1 2 3 .... 3 1 2 3 ... (the same output as observed in python)
         System.out.println(Arrays.toString(ints));
 
-
+        // Calculate Single tokenized message
         System.out.println("Calculating 100 single messages");
         System.out.println("Starting at [millis]: " + System.currentTimeMillis());
         int[] result = null;
@@ -109,5 +126,6 @@ public class ModelLoader {
         System.out.println("Last result " + Arrays.toString(result));
 
     }
+
 }
 
