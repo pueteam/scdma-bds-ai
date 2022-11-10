@@ -143,8 +143,13 @@
     </plugins>
   </build>
   <properties>
+    <tensorflow.version>1.15.5</tensorflow.version>
+    <java.version>1.8</java.version>
+    <scala.binary.version>2.12</scala.binary.version>
+    <nd4j.backend>nd4j-native</nd4j.backend>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <dl4j-master.version>1.0.0-M2</dl4j-master.version>
   </properties>
 </project>
